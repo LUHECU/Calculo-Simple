@@ -41,7 +41,7 @@
   document.getElementById('precioTotal')?.addEventListener('input', function(this: HTMLInputElement) {
     const precioTotal = parseFloat(this.value);
     if (!isNaN(precioTotal)) {
-      const total = precioTotal *100 / 1.13 * 100;
+      const total = (precioTotal *100) / (1.13 * 100);
       document.getElementById('precioUnitario')!.textContent = total.toFixed(4);
     }
   });
