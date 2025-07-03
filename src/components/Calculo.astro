@@ -41,7 +41,7 @@
   document.getElementById('precioTotal')?.addEventListener('input', function(this: HTMLInputElement) {
     const precioTotal = parseFloat(this.value);
     if (!isNaN(precioTotal)) {
-      const total = precioTotal - precioTotal * 0.13;
+      const total = precioTotal / 1.13 + 0.01; //total con IVA
       document.getElementById('precioUnitario')!.textContent = total.toFixed(4);
     }
   });
